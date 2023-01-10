@@ -42,32 +42,39 @@
 using namespace std;
 
 
-int linearSearch(int array[],int size, int userVal)
-{
-    for(int i = 0; i < size; i++) {
-        if(array[i] == userVal){
+int linearSearch(int array[],int size, int userVal){
+
+    for(int i = 0; i < size;i++){
+        if(array[i] == userVal)
+        {
             return i;
         }
     }
     return -1;
 }
 
-int main()
-{
-    int in;
-    int ar[] = {1,2,3,4,5,6};
-    
+
+int main(){
+
+
+
+    int ar[] = {0,1,2,3,4,5,6};
+    int num;
+
     cout << "enter num: " << endl;
-    cin >> in;
+    cin >> num;
 
-    int result = linearSearch(ar,6,in);
+    int result = linearSearch(ar,6, num);
 
-    if(result >= 0){
-        cout << "num: " << ar[result] << " found at index: " << result << endl;
+    if(result >= 0)
+    {
+        cout << "result: " << ar[result] << " at index: " << result << endl;
+
     }
     else{
-        cout << "num not found " << endl;
+        cout << "wrong num " << ar[result] << endl;
     }
+
 
     return 0;
 }
